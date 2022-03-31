@@ -613,7 +613,7 @@ public final class PhotoPickerViewController: UIViewController, UICollectionView
 
         let photoBrowser = PhotoBrowserViewController.browse(photos: photos, at: indexPath.item, builder: { builder -> PhotoBrowserViewController.Builder in
             builder
-                .buildForSelection(true)
+                .buildForSelection(false)
                 .setSelectedPhotos(selectedPhotos)
                 .setMaximumCanBeSelected(self.maximumCanBeSelected)
                 .buildThumbnailsForSelection()
