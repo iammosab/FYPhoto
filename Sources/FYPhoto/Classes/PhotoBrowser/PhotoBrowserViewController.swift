@@ -530,12 +530,12 @@ public class PhotoBrowserViewController: UIViewController, UICollectionViewDataS
 //            bottomToolView.addDoneButton()
             bottomToolView.disableDoneButton(selectedPhotos.isEmpty)
         }
-        if isForSelection {
-            bottomToolView.addEditButton()
-            if let current = currentPhoto.asset, current.mediaType == .image {
-                bottomToolView.editButton.isHidden = false
-            }
-        }
+//        if isForSelection {
+//            bottomToolView.addEditButton()
+//            if let current = currentPhoto.asset, current.mediaType == .image {
+//                bottomToolView.editButton.isHidden = false
+//            }
+//        }
     }
     
     func setupFirstScroll() {
