@@ -503,12 +503,12 @@ public class PhotoBrowserViewController: UIViewController, UICollectionViewDataS
             addPhotoBarItem = UIBarButtonItem(customView: addItemButton)
             self.navigationItem.rightBarButtonItem = addPhotoBarItem
         } else {
-            if canDeleteWhenPreviewingSelectedPhotos {
-                removePhotoBarItem = UIBarButtonItem(barButtonSystemItem: .trash,
-                                                     target: self,
-                                                     action: #selector(removePhotoWhenBrowsingBarItemClicked(_:)))
-                self.navigationItem.rightBarButtonItem = removePhotoBarItem
-            }
+//            if canDeleteWhenPreviewingSelectedPhotos {
+//                removePhotoBarItem = UIBarButtonItem(barButtonSystemItem: .trash,
+//                                                     target: self,
+//                                                     action: #selector(removePhotoWhenBrowsingBarItemClicked(_:)))
+//                self.navigationItem.rightBarButtonItem = removePhotoBarItem
+//            }
         }
         updateNavigationTitle(at: currentDisplayedIndexPath)
     }
