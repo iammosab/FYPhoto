@@ -76,22 +76,31 @@ final class PhotoPickerBottomToolView: UIView {
     }
 
     func makeConstraints() {
-        previewButton.translatesAutoresizingMaskIntoConstraints = false
+//        previewButton.translatesAutoresizingMaskIntoConstraints = false
+//
+//        NSLayoutConstraint.activate([
+//            previewButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+//            previewButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -safeAreaInsetsBottom/2)
+//        ])
 
+        previewButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            previewButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            previewButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
             previewButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -safeAreaInsetsBottom/2)
         ])
-
+        
 //        doneButton.translatesAutoresizingMaskIntoConstraints = false
 //        NSLayoutConstraint.activate([
 //            doneButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
 //            doneButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -safeAreaInsetsBottom/2)
 //        ])
+//
+        
 
         countLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
 //            countLabel.trailingAnchor.constraint(equalTo: self.doneButton.leadingAnchor, constant: -10),
+            countLabel.trailingAnchor.constraint(equalTo: self.previewButton.leadingAnchor, constant: -10),
             countLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -safeAreaInsetsBottom/2)
         ])
     }
