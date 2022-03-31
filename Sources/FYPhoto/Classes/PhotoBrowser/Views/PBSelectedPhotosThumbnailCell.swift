@@ -51,7 +51,7 @@ class PBSelectedPhotosThumbnailCell: UICollectionViewCell {
         super.init(frame: frame)
         contentView.layer.cornerRadius = 4
         contentView.layer.masksToBounds = true
-//        contentView.addSubview(imageView)
+        contentView.addSubview(imageView)
         imageView.frame = contentView.frame
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true

@@ -711,13 +711,14 @@ public class PhotoBrowserViewController: UIViewController, UICollectionViewDataS
         } else { // thumbnails
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PBSelectedPhotosThumbnailCell.reuseIdentifier,
                                                              for: indexPath) as? PBSelectedPhotosThumbnailCell {
+                
                 cell.cellBorderColor = colorConfiguration.browserBottomBarColor.itemTintColor
                 cell.photo = selectedPhotos[indexPath.item]
-                if let selectedIdx = selectedThumbnailIndexPath {
-                    cell.thumbnailIsSelected = indexPath == selectedIdx
-                } else {
-                    cell.thumbnailIsSelected = false
-                }
+//                if let selectedIdx = selectedThumbnailIndexPath {
+//                    cell.thumbnailIsSelected = indexPath == selectedIdx
+//                } else {
+//                    cell.thumbnailIsSelected = false
+//                }
                 return cell
             }
         }
