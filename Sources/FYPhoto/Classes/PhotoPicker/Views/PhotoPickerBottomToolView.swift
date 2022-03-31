@@ -43,7 +43,7 @@ final class PhotoPickerBottomToolView: UIView {
 
         addSubview(previewButton)
         addSubview(countLabel)
-        addSubview(doneButton)
+//        addSubview(doneButton)
 
         previewButton.setTitle(L10n.preview, for: .normal)
         previewButton.layer.cornerRadius = 4
@@ -83,15 +83,15 @@ final class PhotoPickerBottomToolView: UIView {
             previewButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -safeAreaInsetsBottom/2)
         ])
 
-        doneButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            doneButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
-            doneButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -safeAreaInsetsBottom/2)
-        ])
+//        doneButton.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            doneButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+//            doneButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -safeAreaInsetsBottom/2)
+//        ])
 
         countLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            countLabel.trailingAnchor.constraint(equalTo: self.doneButton.leadingAnchor, constant: -10),
+//            countLabel.trailingAnchor.constraint(equalTo: self.doneButton.leadingAnchor, constant: -10),
             countLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: -safeAreaInsetsBottom/2)
         ])
     }
