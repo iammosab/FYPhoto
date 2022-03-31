@@ -547,7 +547,8 @@ public final class PhotoPickerViewController: UIViewController, UICollectionView
                 let indexPathWithoutCamera = regenerate(indexPath: indexPath, if: containsCamera)
                 let selectedAsset = assets[indexPathWithoutCamera.item]
                 if selectedAsset.mediaType == .video {
-                    browseVideoIfValid(selectedAsset)
+//                    browseVideoIfValid(selectedAsset)
+                    browseImages(at: indexPathWithoutCamera)
                 } else {
                     if isSingleSelection {
                         completeSingleSelection(at: indexPath)
@@ -641,16 +642,16 @@ public final class PhotoPickerViewController: UIViewController, UICollectionView
         guard asset.mediaType == .video else {
             return
         }
-//        guard videoValidator.validVideoDuration(asset, limit: maximumVideoDuration) else {
-//            PhotoPickerResource.shared.requestAVAsset(for: asset) { [weak self] (avAsset) in
-//                if let urlAsset = avAsset as? AVURLAsset {
-//                    self?.presentVideoTrimmer(urlAsset, duration: urlAsset.duration.seconds)
-//                } else if let composition = avAsset as? AVComposition {
-//                    self?.presentVideoTrimmer(composition, duration: asset.duration)
-//                }
-//            }
-//            return
-//        }
+        guard videoValidator.validVideoDuration(asset, limit: maximumVideoDuration) else {
+            PhotoPickerResource.shared.requestAVAsset(for: asset) { [weak self] (avAsset) in
+                if let urlAsset = avAsset as? AVURLAsset {
+                    self?.presentVideoTrimmer(urlAsset, duration: urlAsset.duration.seconds)
+                } else if let composition = avAsset as? AVComposition {
+                    self?.presentVideoTrimmer(composition, duration: asset.duration)
+                }
+            }
+            return
+        }
         if !hasMemorySizeLimit {
             self.browseVideo(asset)
         } else {
