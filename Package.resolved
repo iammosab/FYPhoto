@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "FYVideoCompressor",
+        "repositoryURL": "https://github.com/T2Je/FYVideoCompressor.git",
+        "state": {
+          "branch": null,
+          "revision": "6621cf3a14cdc7304d6c54f363c4b6ab68ed06d2",
+          "version": "0.0.3"
+        }
+      },
+      {
         "package": "SDWebImage",
         "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
         "state": {

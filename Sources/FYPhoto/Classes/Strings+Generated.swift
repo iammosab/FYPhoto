@@ -57,7 +57,7 @@ internal enum L10n {
   /// 照片
   internal static let photo = L10n.tr("FYPhoto", "photo")
   /// 预览
-  internal static let preview = L10n.tr("FYPhoto", "Preview")
+  internal static let preview = L10n.tr("FYPhoto", "Cast")
   /// 还原
   internal static let resetPhoto = L10n.tr("FYPhoto", "ResetPhoto")
   /// 恢复
