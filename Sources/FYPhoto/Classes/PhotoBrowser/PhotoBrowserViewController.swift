@@ -243,7 +243,7 @@ public class PhotoBrowserViewController: UIViewController, UICollectionViewDataS
     fileprivate let initialIndex: Int
     /// the maximum number of photos you can select
     var maximumCanBeSelected: Int = 0
-    var isForSelection = false
+    var isForSelection = true
     var supportThumbnails = true
     var supportCaption = false
     var supportNavigationBar = false
