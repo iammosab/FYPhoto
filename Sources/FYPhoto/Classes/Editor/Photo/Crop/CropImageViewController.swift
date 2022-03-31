@@ -338,7 +338,7 @@ public class CropImageViewController: UIViewController {
                 topStackView.removeFully(view: doneButton)
 
                 bottomStackView.addArrangedSubview(cancelButton)
-                bottomStackView.addArrangedSubview(doneButton)
+//                bottomStackView.addArrangedSubview(doneButton)
                 view.addSubview(bottomStackView)
             }
             let cropViewContraints = [
@@ -393,7 +393,7 @@ public class CropImageViewController: UIViewController {
 
             bottomStackView.removeFullyAllArrangedSubviews()
             topStackView.insertArrangedSubview(cancelButton, at: 0)
-            topStackView.addArrangedSubview(doneButton)
+//            topStackView.addArrangedSubview(doneButton)
         }
     }
 
