@@ -43,7 +43,7 @@ final class PhotoPickerBottomToolView: UIView {
 
         addSubview(previewButton)
         addSubview(countLabel)
-//        addSubview(doneButton)
+        addSubview(doneButton)
 
         previewButton.setTitle(L10n.preview, for: .normal)
         previewButton.layer.cornerRadius = 4
