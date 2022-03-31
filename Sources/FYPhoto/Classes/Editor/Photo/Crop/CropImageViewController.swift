@@ -291,7 +291,7 @@ public class CropImageViewController: UIViewController {
 
     func setupBottomToolView() {
         bottomStackView.addArrangedSubview(cancelButton)
-        bottomStackView.addArrangedSubview(doneButton)
+//        bottomStackView.addArrangedSubview(doneButton)
         bottomStackView.distribution = .equalSpacing
 
         cancelButton.setTitle(L10n.cancel, for: .normal)
