@@ -107,7 +107,7 @@ class GridViewCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         contentView.addSubview(livePhotoBadgeImageView)
         contentView.addSubview(videoDurationLabel)
-        contentView.addSubview(selectionButton)
+//        contentView.addSubview(selectionButton)
         contentView.addSubview(overlayView)
         contentView.addSubview(editedAnnotation)
 
@@ -136,12 +136,12 @@ class GridViewCell: UICollectionViewCell {
             videoDurationLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
         ])
 
-        NSLayoutConstraint.activate([
-            selectionButton.topAnchor.constraint(equalTo: topAnchor, constant: 7),
-            selectionButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -7),
-            selectionButton.widthAnchor.constraint(equalToConstant: 34),
-            selectionButton.heightAnchor.constraint(equalToConstant: 34)
-        ])
+//        NSLayoutConstraint.activate([
+//            selectionButton.topAnchor.constraint(equalTo: topAnchor, constant: 7),
+//            selectionButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -7),
+//            selectionButton.widthAnchor.constraint(equalToConstant: 34),
+//            selectionButton.heightAnchor.constraint(equalToConstant: 34)
+//        ])
 
         NSLayoutConstraint.activate([
             overlayView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
