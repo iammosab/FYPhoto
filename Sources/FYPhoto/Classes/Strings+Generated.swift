@@ -34,6 +34,8 @@ internal enum L10n {
   internal static let discardChanges = L10n.tr("FYPhoto", "DiscardChanges")
   /// 完成
   internal static let done = L10n.tr("FYPhoto", "Done")
+    
+  internal static let cast = L10n.tr("FYPhoto", "Cast")
   /// 保存失败
   internal static let failedToSaveMedia = L10n.tr("FYPhoto", "FailedToSaveMedia")
   /// 前置/后置

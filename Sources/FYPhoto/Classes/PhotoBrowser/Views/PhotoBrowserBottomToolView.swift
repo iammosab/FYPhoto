@@ -11,6 +11,7 @@ protocol PhotoBrowserBottomToolViewDelegate: AnyObject {
     func browserBottomToolViewPlayButtonClicked()
     func browserBottomToolViewDoneButtonClicked()
     func browserBottomToolViewEditButtonClicked()
+    func browserBottomToolViewCastButtonClicked()
 }
 
 extension PhotoBrowserBottomToolViewDelegate {
@@ -24,6 +25,7 @@ class PhotoBrowserBottomToolView: UIView {
     let editButton = UIButton()
     let playButton = UIButton()
     let doneButton = UIButton()
+    let castButton = UIButton()
     private let safeAreaInsetsBottom: CGFloat
     private let colorStyle: FYColorConfiguration.BarColor
 
@@ -34,6 +36,7 @@ class PhotoBrowserBottomToolView: UIView {
         backgroundColor = colorStyle.backgroundColor
         self.layer.masksToBounds = true
         addPlayButton()
+        addCastButton()
     }
 
     required init?(coder: NSCoder) {
@@ -70,6 +73,26 @@ class PhotoBrowserBottomToolView: UIView {
         ])
     }
 
+    func addCastButton() {
+        addSubview(castButton)
+        castButton.backgroundColor = colorStyle.itemBackgroundColor
+        castButton.setTitle(L10n.done, for: .normal)
+        castButton.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
+        castButton.setTitleColor(colorStyle.itemTintColor, for: .normal)
+        castButton.setTitleColor(colorStyle.itemDisableColor, for: .disabled)
+        castButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        castButton.isEnabled = false
+        castButton.layer.cornerRadius = 4
+        castButton.layer.masksToBounds = true
+        castButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        castButton.translatesAutoresizingMaskIntoConstraints = false
+        let centerOffset = safeAreaInsetsBottom == 0 ? 0 : -(safeAreaInsetsBottom/2-5)
+        NSLayoutConstraint.activate([
+            castButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
+            castButton.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: centerOffset)
+        ])
+    }
+    
     func addDoneButton() {
         addSubview(doneButton)
         doneButton.backgroundColor = colorStyle.itemBackgroundColor
@@ -129,6 +152,8 @@ class PhotoBrowserBottomToolView: UIView {
             delegate?.browserBottomToolViewDoneButtonClicked()
         } else if sender == editButton {
             delegate?.browserBottomToolViewEditButtonClicked()
+        } else if sender == castButton {
+            delegate?.browserBottomToolViewCastButtonClicked()
         } else {
 
         }
