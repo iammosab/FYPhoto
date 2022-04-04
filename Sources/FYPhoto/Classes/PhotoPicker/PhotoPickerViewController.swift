@@ -341,7 +341,7 @@ public final class PhotoPickerViewController: UIViewController, UICollectionView
     func addSubViews() {
         view.addSubview(collectionView)
         view.addSubview(topBar)
-        view.addSubview(bottomToolBar)
+//        view.addSubview(bottomToolBar)
 
         let safeArea = self.view.safeAreaLayoutGuide
         topBar.translatesAutoresizingMaskIntoConstraints = false
@@ -360,14 +360,14 @@ public final class PhotoPickerViewController: UIViewController, UICollectionView
             collectionView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor)
         ])
 
-        bottomToolBar.translatesAutoresizingMaskIntoConstraints = false
-        let height: CGFloat = safeAreaInsets.bottom + 45
-        NSLayoutConstraint.activate([
-            bottomToolBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            bottomToolBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            bottomToolBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            bottomToolBar.heightAnchor.constraint(equalToConstant: height)
-        ])
+//        bottomToolBar.translatesAutoresizingMaskIntoConstraints = false
+//        let height: CGFloat = safeAreaInsets.bottom + 45
+//        NSLayoutConstraint.activate([
+//            bottomToolBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+//            bottomToolBar.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+//            bottomToolBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+//            bottomToolBar.heightAnchor.constraint(equalToConstant: height)
+//        ])
     }
 
     func completeSelection(photos: [PhotoProtocol], animated: Bool) {
