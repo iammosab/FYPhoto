@@ -76,7 +76,7 @@ class PhotoBrowserBottomToolView: UIView {
     func addCastButton() {
         addSubview(castButton)
         castButton.backgroundColor = colorStyle.itemBackgroundColor
-        castButton.setTitle(L10n.done, for: .normal)
+        castButton.setTitle(L10n.cast, for: .normal)
         castButton.addTarget(self, action: #selector(buttonClicked(_:)), for: .touchUpInside)
         castButton.setTitleColor(colorStyle.itemTintColor, for: .normal)
         castButton.setTitleColor(colorStyle.itemDisableColor, for: .disabled)

@@ -1098,6 +1098,7 @@ extension PhotoBrowserViewController: PhotoBrowserBottomToolViewDelegate {
         assert(!selectedPhotos.isEmpty, "photos shouldn't be empty")
 //        back()
 //        delegate?.photoBrowser(self, didCompleteSelected: selectedPhotos)
+        NSLog("selectedPhotos", selectedPhotos)
     }
 }
 
