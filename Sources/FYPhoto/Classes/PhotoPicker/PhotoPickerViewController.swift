@@ -348,7 +348,8 @@ public final class PhotoPickerViewController: UIViewController, UICollectionView
         NSLayoutConstraint.activate([
             topBar.topAnchor.constraint(equalTo: view.topAnchor),
             topBar.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
-            topBar.heightAnchor.constraint(equalToConstant: safeAreaInsets.top + 44),
+//            topBar.heightAnchor.constraint(equalToConstant: safeAreaInsets.top + 44),
+            topBar.heightAnchor.constraint(equalToConstant: safeAreaInsets.top),
             topBar.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor)
         ])
 
