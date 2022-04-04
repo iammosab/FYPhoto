@@ -36,6 +36,7 @@ public final class PhotoPickerViewController: UIViewController, UICollectionView
 
     // call back for photo, video selections
     public var selectedPhotos: (([SelectedImage]) -> Void)?
+    public var currentMedia: ((PhotoProtocol) -> Void)?
     public var selectedVideo: ((Result<SelectedVideo, Error>) -> Void)?
 
     var allPhotos: PHFetchResult<PHAsset> = PHFetchResult()
@@ -817,6 +818,10 @@ extension PhotoPickerViewController: PhotoBrowserViewControllerDelegate {
         photoBrowser.dismiss(animated: true) {
             self.completeSelection(photos: photos, animated: true)
         }
+    }
+    
+    public func photoBrowser(_ photoBrowser: PhotoBrowserViewController, didViewed photo: PhotoProtocol) {
+        self.currentMedia?(photo)
     }
 
     public func photoBrowser(_ photoBrowser: PhotoBrowserViewController, deletePhotoAtIndexWhenBrowsing index: Int) {

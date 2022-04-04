@@ -14,6 +14,8 @@ public protocol PhotoBrowserViewControllerDelegate: AnyObject {
 
     func photoBrowser(_ photoBrowser: PhotoBrowserViewController, selectedAssets identifiers: [String])
     func photoBrowser(_ photoBrowser: PhotoBrowserViewController, didCompleteSelected photos: [PhotoProtocol])
+    
+    func photoBrowser(_ photoBrowser: PhotoBrowserViewController, didViewed photo: PhotoProtocol)
 
     func photoBrowser(_ photoBrowser: PhotoBrowserViewController, deletePhotoAtIndexWhenBrowsing index: Int)
 
@@ -29,6 +31,8 @@ public extension PhotoBrowserViewControllerDelegate {
     func photoBrowser(_ photoBrowser: PhotoBrowserViewController, scrollAt item: Int) { }
     func photoBrowser(_ photoBrowser: PhotoBrowserViewController, selectedAssets identifiers: [String]) { }
     func photoBrowser(_ photoBrowser: PhotoBrowserViewController, didCompleteSelected photos: [PhotoProtocol]) { }
+    
+    func photoBrowser(_ photoBrowser: PhotoBrowserViewController, didViewed photo: PhotoProtocol) {}
     func photoBrowser(_ photoBrowser: PhotoBrowserViewController, deletePhotoAtIndexWhenBrowsing index: Int) { }
     func photoBrowser(_ photoBrowser: PhotoBrowserViewController, editedPhotos: [String: CroppedRestoreData]) { }
 }
