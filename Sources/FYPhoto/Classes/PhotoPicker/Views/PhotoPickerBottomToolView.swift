@@ -41,8 +41,8 @@ final class PhotoPickerBottomToolView: UIView {
         super.init(frame: .zero)
         backgroundColor = colorStyle.backgroundColor
 
-        addSubview(previewButton)
-        addSubview(countLabel)
+//        addSubview(previewButton)
+//        addSubview(countLabel)
 //        addSubview(doneButton)
 
         previewButton.setTitle(L10n.preview, for: .normal)
@@ -72,7 +72,7 @@ final class PhotoPickerBottomToolView: UIView {
         countLabel.textAlignment = .right
         countLabel.text = "0/\(selectionLimit)"
 
-        makeConstraints()
+//        makeConstraints()
     }
 
     func makeConstraints() {
