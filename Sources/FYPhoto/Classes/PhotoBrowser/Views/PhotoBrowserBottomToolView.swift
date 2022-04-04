@@ -81,7 +81,7 @@ class PhotoBrowserBottomToolView: UIView {
         castButton.setTitleColor(colorStyle.itemTintColor, for: .normal)
         castButton.setTitleColor(colorStyle.itemDisableColor, for: .disabled)
         castButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        castButton.isEnabled = false
+//        castButton.isEnabled = false
         castButton.layer.cornerRadius = 4
         castButton.layer.masksToBounds = true
         castButton.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
