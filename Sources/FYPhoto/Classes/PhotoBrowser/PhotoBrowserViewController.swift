@@ -527,7 +527,7 @@ public class PhotoBrowserViewController: UIViewController, UICollectionViewDataS
         ])
         bottomToolView.showPlayButton(currentPhoto.isVideo)
         if isForSelection || canDeleteWhenPreviewingSelectedPhotos {
-//            bottomToolView.addDoneButton()
+            bottomToolView.addDoneButton()
             bottomToolView.disableDoneButton(selectedPhotos.isEmpty)
         }
 //        if isForSelection {
