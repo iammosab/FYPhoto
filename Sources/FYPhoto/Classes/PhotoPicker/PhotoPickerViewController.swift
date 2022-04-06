@@ -36,6 +36,7 @@ public final class PhotoPickerViewController: UIViewController, UICollectionView
 
     // call back for photo, video selections
     public var selectedPhotos: (([SelectedImage]) -> Void)?
+    // current media exist
     public var currentMedia: ((PhotoProtocol) -> Void)?
     public var selectedVideo: ((Result<SelectedVideo, Error>) -> Void)?
 
