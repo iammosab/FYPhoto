@@ -809,7 +809,7 @@ extension PhotoPickerViewController: PhotoBrowserViewControllerDelegate {
         let itemFromBrowser = item
         let itemInPhotoPicker = containsCamera ? itemFromBrowser - 1 : itemFromBrowser
         lastSelectedIndexPath = IndexPath(item: itemInPhotoPicker, section: 0)
-        print("scrollAt \(item)")
+        print("scrollAt \(item) - itemInPhotoPicker: \(itemInPhotoPicker) - lastSelectedIndexPath: \(lastSelectedIndexPath)")
     }
 
     public func photoBrowser(_ photoBrowser: PhotoBrowserViewController, selectedAssets identifiers: [String]) {
