@@ -185,7 +185,7 @@ public class PhotoBrowserViewController: UIViewController, UICollectionViewDataS
 
     fileprivate var currentPhoto: PhotoProtocol {
         willSet {
-            print("current Photo \(newValue.image)")
+            print("current Photo v \(newValue) - isVideo: \(newValue.isVideo)")
             bottomToolView.showPlayButton(newValue.isVideo)
             bottomToolView.editButton.isHidden = newValue.asset?.mediaType != .image
         }
