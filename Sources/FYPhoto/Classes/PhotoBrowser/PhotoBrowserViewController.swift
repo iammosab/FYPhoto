@@ -188,6 +188,7 @@ public class PhotoBrowserViewController: UIViewController, UICollectionViewDataS
             print("current Photo v \(newValue) - isVideo: \(newValue.isVideo)")
             bottomToolView.showPlayButton(newValue.isVideo)
             bottomToolView.editButton.isHidden = newValue.asset?.mediaType != .image
+            delegate?.photoBrowser(self, didMediaChanged: newValue)
         }
     }
 
@@ -1098,7 +1099,7 @@ extension PhotoBrowserViewController: PhotoBrowserBottomToolViewDelegate {
     func browserBottomToolViewCastButtonClicked() {
 //        assert(!selectedPhotos.isEmpty, "photos shouldn't be empty")
 //        back()
-        delegate?.photoBrowser(self, didViewed: currentPhoto)
+        delegate?.photoBrowser(self, didMediaViewed: currentPhoto)
         print("currentPhoto : \(currentPhoto)")
     }
 }
