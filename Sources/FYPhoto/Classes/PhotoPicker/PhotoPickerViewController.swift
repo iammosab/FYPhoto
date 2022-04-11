@@ -825,11 +825,11 @@ extension PhotoPickerViewController: PhotoBrowserViewControllerDelegate {
     }
     
     public func photoBrowser(_ photoBrowser: PhotoBrowserViewController, didMediaViewed photo: PhotoProtocol) {
-        self.currentMedia?(photo)
+//        self.currentMedia?(photo)
     }
     
     public func photoBrowser(_ photoBrowser: PhotoBrowserViewController, didMediaChanged photo: PhotoProtocol) {
-        self.currentMedia?(photo)
+//        self.currentMedia?(photo)
     }
 
     public func photoBrowser(_ photoBrowser: PhotoBrowserViewController, deletePhotoAtIndexWhenBrowsing index: Int) {
