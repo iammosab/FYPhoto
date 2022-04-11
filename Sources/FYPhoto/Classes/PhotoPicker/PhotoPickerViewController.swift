@@ -810,6 +810,8 @@ extension PhotoPickerViewController: PhotoBrowserViewControllerDelegate {
         let itemInPhotoPicker = containsCamera ? itemFromBrowser - 1 : itemFromBrowser
         lastSelectedIndexPath = IndexPath(item: itemInPhotoPicker, section: 0)
         print("scrollAt \(item) - itemInPhotoPicker: \(itemInPhotoPicker) - lastSelectedIndexPath: \(lastSelectedIndexPath)")
+        FYPhotoCacheCleaner.clearMemory()
+        FYPhotoCacheCleaner.clearDisk()
     }
 
     public func photoBrowser(_ photoBrowser: PhotoBrowserViewController, selectedAssets identifiers: [String]) {

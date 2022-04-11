@@ -87,19 +87,19 @@ extension PhotoBrowserViewController {
         playerItemStatusToken = playerItem.observe(\.status, options: .new) { (_, change) in
             // Switch over status value
             switch change.newValue {
-            case .readyToPlay:
-                print("Player item is ready to play.")
-            // Player item is ready to play.
-            case .failed:
-                print("Player item failed. See error.")
-            // Player item failed. See error.
-            case .unknown:
-                print("unknown status")
-            // Player item is not yet ready.
-            case .none:
-                break
-            @unknown default:
-                fatalError()
+                case .readyToPlay:
+                    print("Player item is ready to play.")
+                // Player item is ready to play.
+                case .failed:
+                    print("Player item failed. See error.")
+                // Player item failed. See error.
+                case .unknown:
+                    print("unknown status")
+                // Player item is not yet ready.
+                case .none:
+                    break
+                @unknown default:
+                    fatalError()
             }
         }
 
