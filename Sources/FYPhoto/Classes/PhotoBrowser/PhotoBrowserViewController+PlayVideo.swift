@@ -37,6 +37,9 @@ extension PhotoBrowserViewController {
     }
 
     fileprivate func setupPlayer(url: URL, for playerView: PlayerView, completion: ((URL?) -> Void)?) {
+        
+        print("FYPhoto setupPlayer url: \(url)")
+
         if let cache = videoCache {
             cache.fetchFilePathWith(key: url) { (result) in
                 switch result {
